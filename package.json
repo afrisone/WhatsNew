@@ -5,12 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "./node_modules/typescript/bin/tsc --build ./client/tsconfig.json & ./node_modules/typescript/bin/tsc --build ./server/tsconfig.json"
+    "build": "./node_modules/typescript/bin/tsc --build ./client/tsconfig.json & ./node_modules/typescript/bin/tsc --build ./server/tsconfig.json",
+    "start-server": "npm run build & node build/server/server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@types/node": "^12.7.8",
+    "fastify": "^2.8.0",
     "http2": "^3.3.7",
     "typescript": "^3.6.3"
   }
